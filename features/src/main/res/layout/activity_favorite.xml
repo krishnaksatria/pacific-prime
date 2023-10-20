@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.id.pacificprime.commons.ui.appbar.NavigationAppBar
+        android:id="@+id/navBarFavorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/label_favorite_movie" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerMovie"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimens_8dp"
+        android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:paddingHorizontal="@dimen/dimens_15dp"
+        android:paddingBottom="@dimen/dimens_15dp"
+        app:layout_constraintTop_toBottomOf="@+id/navBarFavorite" />
+
+    <LinearLayout
+        android:id="@+id/layoutEmptyFavorite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/dimens_70dp"
+            android:layout_height="@dimen/dimens_70dp"
+            android:src="@drawable/ic_favorite_empty" />
+
+        <TextView
+            style="@style/Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dimens_40dp"
+            android:layout_marginTop="@dimen/dimens_24dp"
+            android:gravity="center"
+            android:text="@string/label_empty_favorite" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

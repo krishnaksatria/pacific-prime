@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Typography -->
+    <style name="Headline">
+        <item name="fontFamily">@font/pjs_bold</item>
+        <item name="android:textSize">@dimen/dimens_18dp</item>
+        <item name="android:textColor">@color/base_black</item>
+    </style>
+
+    <style name="Title">
+        <item name="fontFamily">@font/pjs_bold</item>
+        <item name="android:textSize">@dimen/dimens_16dp</item>
+        <item name="android:textColor">@color/base_black</item>
+    </style>
+
+    <style name="Body">
+        <item name="fontFamily">@font/pjs_regular</item>
+        <item name="android:textSize">@dimen/dimens_14dp</item>
+        <item name="android:textColor">@color/base_black</item>
+    </style>
+</resources>

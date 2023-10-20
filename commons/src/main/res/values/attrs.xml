@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Bar -->
+    <declare-styleable name="NavigationAppBar">
+        <attr name="title" />
+        <attr name="endButtonSrc" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomLoadingView">
+        <attr name="overlayBackground" format="reference" />
+        <attr name="progressBackground" format="reference" />
+        <attr name="progressTint" format="color" />
+    </declare-styleable>
+</resources>

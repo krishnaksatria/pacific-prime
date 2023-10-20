@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/appBarDashboard"
+        layout="@layout/layout_app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dimens_15dp">
+
+            <include
+                android:id="@+id/searchBox"
+                layout="@layout/layout_search_box"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="@dimen/dimens_15dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                style="@style/Headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_20dp"
+                android:paddingHorizontal="@dimen/dimens_15dp"
+                android:text="@string/label_now_playing" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerNowPlaying"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_8dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingHorizontal="@dimen/dimens_15dp" />
+
+            <TextView
+                style="@style/Headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_20dp"
+                android:paddingHorizontal="@dimen/dimens_15dp"
+                android:text="@string/label_popular_movie" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerPopularMovie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_8dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingHorizontal="@dimen/dimens_15dp" />
+
+            <TextView
+                style="@style/Headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_20dp"
+                android:paddingHorizontal="@dimen/dimens_15dp"
+                android:text="@string/label_top_rated" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTopRated"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_8dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingHorizontal="@dimen/dimens_15dp" />
+
+            <TextView
+                style="@style/Headline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_20dp"
+                android:paddingHorizontal="@dimen/dimens_15dp"
+                android:text="@string/label_upcoming" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerUpcoming"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dimens_8dp"
+                android:clipToPadding="false"
+                android:overScrollMode="never"
+                android:paddingHorizontal="@dimen/dimens_15dp" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.id.pacificprime.commons.ui.loading.CustomLoadingView
+        android:id="@+id/progressBarLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</LinearLayout>

@@ -1,0 +1,118 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion versions.compileSdkVersion
+
+    signingConfigs {
+        release {
+            storeFile file('keystore')
+            storePassword 'pacificprime'
+            keyAlias 'pacificprimealias'
+            keyPassword 'pacificprime'
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.id.pacificprime"
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode versions.versionCode
+        versionName versions.versionName
+
+        testInstrumentationRunner "com.id.pacificprime.ApplicationTestRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    lintOptions {
+        //Temporary fix for bug in AGP 7.0
+        //https://issuetracker.google.com/issues/214253532
+        disable "Instantiatable"
+    }
+
+    flavorDimensions "mode"
+    productFlavors {
+        staging {
+            dimension "mode"
+            buildConfigField "String", "API_URL", "\"https://api.themoviedb.org/3/\""
+            applicationIdSuffix ".staging"
+        }
+        production {
+            dimension "mode"
+            buildConfigField "String", "API_URL", "\"https://api.themoviedb.org/3/\""
+        }
+    }
+}
+
+dependencies {
+    implementation project(':libraries')
+    implementation project(':commons')
+    implementation project(':core')
+    implementation project(':features')
+    implementation project(':room')
+
+    implementation androidX.coreKtx
+
+    //UI
+    implementation androidX.appCompat
+
+    //Preference
+    implementation androidX.preferences
+
+    //Chuck - OkHttp Logging
+    debugImplementation debugging.chuckDebug
+    releaseImplementation debugging.chuckRelease
+
+    //Koin - Dependency Injection
+    implementation koin.koinAndroid
+
+    //Retrofit
+    implementation retrofit.retrofit
+    implementation retrofit.converterGson
+    implementation retrofit.rxJavaAdapter
+
+    //Logger
+    implementation logTool.timber
+
+    //Room - Database
+    implementation room.roomRuntime
+    implementation room.roomRxJava
+    kapt room.roomCompiler
+
+    //Unit Test
+    testImplementation test.junit
+
+    //Automated Test
+    androidTestImplementation test.testExt
+    androidTestImplementation test.core
+    androidTestImplementation test.coreKtx
+    androidTestImplementation test.espresso
+    androidTestImplementation test.espressoContrib
+    androidTestImplementation test.okhttpIdling
+    androidTestImplementation test.rx3Idler
+    androidTestImplementation koin.koinTest
+}

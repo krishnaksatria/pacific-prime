@@ -1,0 +1,8 @@
+rootProject.name = "pacific-prime"
+include ':app'
+include ':features'
+include ':core'
+include ':commons'
+include ':dto'
+include ':libraries'
+include ':room'

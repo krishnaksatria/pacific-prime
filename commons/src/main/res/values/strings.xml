@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_pacific_prime_movies">Pacific Prime Movie Gallery</string>
+    <string name="label_now_playing">Now Playing</string>
+    <string name="label_popular_movie">Popular Movie</string>
+    <string name="label_top_rated">Top Rated</string>
+    <string name="label_upcoming">Upcoming</string>
+    <string name="label_favorite_movie">Favorite Movie</string>
+    <string name="label_search">Search</string>
+    <string name="label_search_movies">Search movies…</string>
+    <string name="label_description">Description</string>
+    <string name="label_review">Review</string>
+    <string name="label_title">Title</string>
+    <string name="label_error_general_title">There is an error</string>
+    <string name="label_error_general_desc">We\'re fixing it. Please wait and try again.</string>
+    <string name="label_success_remove_data">Data Removed</string>
+    <string name="label_success_insert_data">Data Inserted</string>
+    <string name="label_detail">Detail</string>
+    <string name="label_empty_favorite">You can add your favorite movies first via the movie details page</string>
+    <string name="label_empty_search">We can\'t find the movie you are looking for, please use another keyword.</string>
+    <string name="label_image_prefix">https://image.tmdb.org/t/p/original%1$s</string>
+</resources>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimens_0dp"
+        android:layout_weight="1"
+        android:fillViewport="true"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/dimens_15dp">
+
+            <com.id.pacificprime.commons.ui.appbar.NavigationAppBar
+                android:id="@+id/appBarMovieDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:title="@string/label_detail"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageMovie"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimens_200dp"
+                android:scaleType="centerCrop" />
+
+            <TextView
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens_15dp"
+                android:layout_marginTop="@dimen/dimens_20dp"
+                android:text="@string/label_title" />
+
+            <TextView
+                android:id="@+id/textMovieTitle"
+                style="@style/Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens_15dp"
+                android:layout_marginTop="@dimen/dimens_5dp" />
+
+            <TextView
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens_15dp"
+                android:layout_marginTop="@dimen/dimens_20dp"
+                android:text="@string/label_description" />
+
+            <TextView
+                android:id="@+id/textMovieDescription"
+                style="@style/Body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens_15dp"
+                android:layout_marginTop="@dimen/dimens_5dp" />
+
+            <TextView
+                style="@style/Title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens_15dp"
+                android:layout_marginTop="@dimen/dimens_20dp"
+                android:text="@string/label_review" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerReview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/dimens_15dp"
+                android:layout_marginTop="@dimen/dimens_5dp"
+                android:overScrollMode="never" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.id.pacificprime.commons.ui.loading.CustomLoadingView
+        android:id="@+id/progressBarLoading"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+</LinearLayout>

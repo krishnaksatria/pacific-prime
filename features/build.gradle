@@ -1,0 +1,70 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+}
+
+android {
+    compileSdkVersion versions.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion versions.minSdkVersion
+        targetSdkVersion versions.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            consumerProguardFiles "consumer-rules.pro"
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation project(':libraries')
+    implementation project(':commons')
+    implementation project(':core')
+    implementation project(':room')
+
+    implementation androidX.coreKtx
+
+    //RxJava - Reactive Observable Pattern
+    implementation reactiveX.rxJava
+    implementation reactiveX.rxAndroid
+
+    //Retrofit
+    implementation retrofit.converterGson
+
+    //UI
+    implementation androidX.appCompat
+    implementation google.material
+    implementation androidX.contraintLayout
+    implementation androidX.recyclerview
+
+    //Koin
+    implementation koin.koinAndroid
+
+    //Logger
+    implementation logTool.timber
+
+    //Test
+    testImplementation test.junit
+    androidTestImplementation test.testExt
+    androidTestImplementation test.espresso
+}

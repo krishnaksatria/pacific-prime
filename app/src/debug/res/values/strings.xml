@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<resources>
+    <!-- Debug Menu -->
+    <string name="debug_channel_name" translatable="false">Debug Menu</string>
+    <string name="debug_channel_description" translatable="false">Debug Menu Notification</string>
+
+    <!-- Debug Screen -->
+    <string name="label_debug_menu" translatable="false">Debug Menu Screen</string>
+    <string name="label_debug_landing" translatable="false">Login with injected service</string>
+    <string name="label_debug_home" translatable="false">Home with injected service</string>
+    <string name="label_debug_questionnaire" translatable="false">Questionnaire</string>
+    <string name="label_debug_date_picker" translatable="false">Date Picker</string>
+
+</resources>

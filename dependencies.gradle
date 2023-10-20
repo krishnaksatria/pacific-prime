@@ -1,0 +1,64 @@
+ext {
+    versions = [
+            compileSdkVersion: 33,
+            minSdkVersion    : 26,
+            targetSdkVersion : 33,
+            versionName      : '1.1',
+            versionCode      : 1
+    ]
+    androidX = [
+            coreKtx         : 'androidx.core:core-ktx:1.7.0',
+            appCompat       : 'androidx.appcompat:appcompat:1.6.1',
+            contraintLayout : 'androidx.constraintlayout:constraintlayout:2.1.3',
+            preferences     : 'androidx.preference:preference-ktx:1.2.0',
+            security        : 'androidx.security:security-crypto:1.0.0',
+            recyclerview    : 'androidx.recyclerview:recyclerview:1.2.1'
+    ]
+    google = [
+            material           : 'com.google.android.material:material:1.5.0',
+            gson               : 'com.google.code.gson:gson:2.8.9',
+    ]
+    retrofit = [
+            retrofit     : 'com.squareup.retrofit2:retrofit:2.9.0',
+            converterGson: 'com.squareup.retrofit2:converter-gson:2.9.0',
+            rxJavaAdapter: 'com.squareup.retrofit2:adapter-rxjava3:2.9.0',
+            okHttp3      : 'com.squareup.okhttp3:okhttp:4.9.2'
+    ]
+    koin = [
+            koinCore   : 'io.insert-koin:koin-core:3.2.0',
+            koinAndroid: 'io.insert-koin:koin-android:3.2.0',
+            koinTest   : 'io.insert-koin:koin-test:3.2.0'
+    ]
+    logTool = [
+            timber: 'com.jakewharton.timber:timber:5.0.1'
+    ]
+    reactiveX = [
+            rxJava   : 'io.reactivex.rxjava3:rxjava:3.1.3',
+            rxAndroid: 'io.reactivex.rxjava3:rxandroid:3.0.0'
+    ]
+    debugging = [
+            chuckDebug  : 'com.github.chuckerteam.chucker:library:3.5.2',
+            chuckRelease: 'com.github.chuckerteam.chucker:library-no-op:3.5.2'
+    ]
+    test = [
+            junit          : 'junit:junit:4.13.2',
+            testExt        : 'androidx.test.ext:junit:1.1.3',
+            core           : 'androidx.test:core:1.4.0',
+            coreKtx        : 'androidx.test:core-ktx:1.4.0',
+            runner         : 'androidx.test:runner:1.4.0',
+            rules          : 'androidx.test:rules:1.4.0',
+            espresso       : 'androidx.test.espresso:espresso-core:3.4.0',
+            espressoIntents: 'androidx.test.espresso:espresso-intents:3.4.0',
+            espressoContrib: 'androidx.test.espresso:espresso-contrib:3.4.0',
+            okhttpIdling   : 'com.jakewharton.espresso:okhttp3-idling-resource:1.0.0',
+            rx3Idler       : 'com.squareup.rx.idler:rx3-idler:0.11.0'
+    ]
+    bumpTech = [
+            glide: 'com.github.bumptech.glide:glide:4.14.2'
+    ]
+    room = [
+            roomRuntime : 'androidx.room:room-runtime:2.4.3',
+            roomRxJava  : 'androidx.room:room-rxjava3:2.4.3',
+            roomCompiler: 'androidx.room:room-compiler:2.4.3'
+    ]
+}

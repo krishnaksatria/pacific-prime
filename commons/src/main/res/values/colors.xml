@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_blue">#313E72</color>
+    <color name="secondary_green">#40B7B0</color>
+    <color name="tertiary_orange">#EC7F6D</color>
+
+    <!--    base color-->
+    <color name="base_black">#363636</color>
+    <color name="base_white">#FFFFFF</color>
+    <color name="base_grey">#F7F7F7</color>
+
+    <!--    bg color-->
+    <color name="bg_blue">#F2F9FF</color>
+    <color name="bg_orange">#FEEEE2</color>
+    <color name="bg_yellow">#FFF3D2</color>
+    <color name="bg_green">#EFFAFA</color>
+
+    <!--    greyish-->
+    <color name="light_grey">#EEEEEE</color>
+    <color name="grey">#CCCCCC</color>
+    <color name="dark_grey">#B0B0B0</color>
+    <color name="gray">#E1E1E1</color>
+    <color name="grey_cb">#CBCBCB</color>
+    <color name="grey_82">#828282</color>
+    <color name="grey_89">#898989</color>
+    <color name="grey_61">#616161</color>
+    <color name="almost_black">#505454</color>
+
+    <!--    variant-->
+    <color name="variant_blue">#E0E9F1</color>
+    <color name="variant_green">#B0E8E5</color>
+    <color name="variant_peach">#F6B9AF</color>
+
+    <!--    orange-->
+    <color name="dark_orange">#FEB7B7</color>
+
+    <!--    red-->
+    <color name="red">#CE1B31</color>
+
+    <!--    alert-->
+    <color name="critical">#F85C42</color>
+
+    <!--   date picker-->
+    <color name="black700">#121212</color>
+    <color name="black400">#959393</color>
+
+    <!--  chart-->
+    <color name="chart_grid">#F4F3F3</color>
+
+    <!--   transparent-->
+    <color name="semiTransparentColor">#D9FFFFFF</color>
+</resources>
